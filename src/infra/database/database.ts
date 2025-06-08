@@ -19,6 +19,8 @@ export type DatabaseConfig = {
   migrationsRun: PostgresConnectionOptions['migrationsRun'];
   entities: PostgresConnectionOptions['entities'];
   migrations: PostgresConnectionOptions['migrations'];
+  extra?: PostgresConnectionOptions['extra'];
+  poolSize?: PostgresConnectionOptions['poolSize'];
 };
 
 export interface IDatabase {

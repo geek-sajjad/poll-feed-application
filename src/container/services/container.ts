@@ -140,6 +140,12 @@ class ServicesContainerBuilder {
       migrations: [
         env('TYPEORM_MIGRATIONS', 'src/infra/database/migrations/**/*.ts'),
       ],
+      extra: {
+        min: 10,
+        max: 70, // maximum number of connections
+        idleTimeoutMillis: 10000, // how long a client is allowed to remain idle before being closed
+        connectionTimeoutMillis: 2000,
+      },
     };
   }
 }
